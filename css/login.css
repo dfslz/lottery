@@ -1,0 +1,58 @@
+.bg {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+}
+
+.logbox {
+    position: relative;
+    top: -200%;
+    left: -50%;
+    height: 300px;
+    width: 500px;
+    background-color: rgba(196, 49, 49, 0.747);
+    box-shadow: 0px 0px 25px rgba(166, 187, 73, 0.5);
+    -webkit-text-fill-color: rgb(250, 248, 247);
+}
+
+.user {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    text-align: right;
+}
+
+.id {
+    width: 240px;
+    outline: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    line-height: 2em;
+    border-bottom: 1px solid gray;
+    margin-left: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0.9em;
+    letter-spacing: 0.1em
+}
+
+#title {
+    font-size: 2em;
+    position: relative;
+    text-align: center;
+}
+
+input::-webkit-input-placeholder {
+    -webkit-text-fill-color: rgba(98, 206, 35, 0.541);
+    font-size: 0.85em;
+    letter-spacing: none;
+}
+
+.submit {
+    -webkit-text-fill-color: aliceblue;
+    background-color: rgba(238, 77, 2, 0.637);
+    width: 250px;
+    border-color: rgba(179, 172, 172, 0.637);
+    border-radius: 8px;
+    outline: 0px;
+}

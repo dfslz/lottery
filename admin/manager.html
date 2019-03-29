@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link href="../css/manager.css" type="text/css" rel="stylesheet" />
+    <link href="../css/buttons.css" type="text/css" rel="stylesheet" />
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="../js/manager.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="mainContainer">
+        <!--主体结构-->
+        <div id="leftContext" class="leftContext">
+            <!--左部-->
+            <div id="userHeadPortrait" class="user">
+                <!--用户头像-->
+                <img src="../img/user.jpeg" class="portrait" id="portrait" />
+                <p class="username">
+                    admin
+                </p>
+            </div>
+
+            <div id="toolList">
+                <!--工具栏-->
+                <div id="create" class="menu">
+                    <p onclick="create()">创建抽奖</p>
+                </div>
+
+                <div id="running" class="menu">
+                    <p>进行中</p>
+                </div>
+
+                <div id="finished" class="menu">
+                    <p>已结束</p>
+                </div>
+
+                <div id="about" class="menu">
+                    <p>关于我们</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="rightContext" class="rightContext">
+            <!--右部-->
+            <div id="welComeWord" class="titlebar">
+                <p>welcome to use lottery manage system!</p>
+            </div>
+
+            <div id="base" class="base">
+                <form id="lnf">
+                    <span>抽奖名称: </span>
+                    <input id="lname" type="text" name="lotteryName" class="inputStyle" />
+                </form>
+            </div>
+
+            <div id="time" class="base">
+                <form id="tf">
+                    <span>开始时间</span>
+                    <input id="start" type="date" class="inputStyle" />
+                    <br />
+
+                    <span>结束时间</span>
+                    <input id="end" type="date" class="inputStyle" />
+                    <br>
+                </form>
+            </div>
+
+            <div id="reward" class="base">
+                <form id="rf">
+                    <table id="rewardTable">
+                        <caption>奖品设置</caption>
+                        <tr>
+                            <td>奖品名称</td>
+                            <td>奖品数量</td>
+                            <td>所占比重%(概率)</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="table" /></td>
+                            <td><input type="number" class="table" min="0" /></td>
+                            <td><input type="number" class="table" min="0" /></td>
+                        </tr>
+                    </table>
+                    <input type="button" class="add" onclick="addReward()" value="添加奖品">
+                </form>
+            </div>
+
+            <div id="peopleSetting" class="base">
+
+            </div>
+
+            <div class="base">
+                <button onclick="submit()" class="button button-highlight button-pill button-large">提交</button>
+            </div>
+
+            <div id="footMessage" class="base">
+                <p>@copyright: 东北大学计算机系1606班</p>
+                <p>罗智 孙思伟 陈毅凯</p>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
