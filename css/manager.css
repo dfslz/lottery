@@ -128,7 +128,7 @@ button {
 #reward th,
 caption {
     font-size: 1.1em;
-    text-align: center;
+    text-align: center !important;
     padding-top: 5px;
     padding-bottom: 4px;
     background-color: #A7C942;
@@ -164,10 +164,19 @@ caption {
     padding-top: 0px;
     padding-bottom: 0px;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
     top: 0px;
     border: none;
     outline: none;
     text-align: center;
     font-size: 1em;
+}
+
+.upload {
+    position: relative;
+    text-align: center;
+}
+
+.up {
+    width: 70%;
 }

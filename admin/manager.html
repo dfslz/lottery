@@ -1,48 +1,57 @@
 <!DOCTYPE html>
-<html lang="zh" class="no-js"></html>
+<html lang="zh" class="no-js">
+
 <head>
-<title>Home</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="" />
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
 
-<link href="../css/manager.css" type="text/css" rel="stylesheet" />
-<link href="../css/buttons.css" type="text/css" rel="stylesheet" />
-<script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
-<script src="../js/manager.js" type="text/javascript"></script>
+	<link href="../css/manager.css" type="text/css" rel="stylesheet" />
+	<link href="../css/buttons.css" type="text/css" rel="stylesheet" />
+	<script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script src="../js/manager.js" type="text/javascript"></script>
 
-<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="css/demo.css" />
-<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
 
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- bootstrap-css -->
-<link rel="stylesheet" href="css/bootstrap.css">
-<!-- //bootstrap-css -->
-<!-- Custom CSS -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<!-- font CSS -->
-<!--<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>-->
-<!-- font-awesome icons -->
-<link rel="stylesheet" href="css/font.css" type="text/css"/>
-<link href="css/font-awesome.css" rel="stylesheet"> 
-<!-- //font-awesome icons -->
-<script>
-        (function () {
-          var js;
-          if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
-            js = 'js/jquery.min.js';
-          } else {
-            js = 'js/jquery.min.js';
-          }
-          document.write('<script src="' + js + '"><\/script>');
-        }());
- </script>
-<script src="js/modernizr.js"></script>
-<script src="js/jquery.cookie.js"></script>
-<script src="js/screenfull.js"></script>
-		<script>
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- bootstrap-css -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- //bootstrap-css -->
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!-- font CSS -->
+	<!--<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>-->
+	<!-- font-awesome icons -->
+	<link rel="stylesheet" href="css/font.css" type="text/css" />
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<script>
+		(function () {
+			var js;
+			if (typeof JSON !== 'undefined' && 'querySelector' in document && 'addEventListener' in window) {
+				js = 'js/jquery.min.js';
+			} else {
+				js = 'js/jquery.min.js';
+			}
+			document.write('<script src="' + js + '"><\/script>');
+		}());
+	</script>
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/screenfull.js"></script>
+	<script>
 		$(function () {
 			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
 
@@ -50,37 +59,38 @@
 				return false;
 			}
 
-			
+
 
 			$('#toggle').click(function () {
 				screenfull.toggle($('#container')[0]);
-			});	
+			});
 		});
-		</script>
-<!-- charts -->
-<script src="js/raphael-min.js"></script>
-<script src="js/morris.js"></script>
-<link rel="stylesheet" href="css/morris.css">
-<!-- //charts -->
-<!--skycons-icons-->
-<script src="js/skycons.js"></script>
-<!--//skycons-icons-->
+	</script>
+	<!-- charts -->
+	<script src="js/raphael-min.js"></script>
+	<script src="js/morris.js"></script>
+	<link rel="stylesheet" href="css/morris.css">
+	<!-- //charts -->
+	<!--skycons-icons-->
+	<script src="js/skycons.js"></script>
+	<!--//skycons-icons-->
 </head>
+
 <body class="dashboard-page">
 	<script>
-	        var theme = $.cookie('protonTheme') || 'default';
-	        $('body').removeClass (function (index, css) {
-	            return (css.match (/\btheme-\S+/g) || []).join(' ');
-	        });
-	        if (theme !== 'default') $('body').addClass(theme);
-        </script>
+		var theme = $.cookie('protonTheme') || 'default';
+		$('body').removeClass(function (index, css) {
+			return (css.match(/\btheme-\S+/g) || []).join(' ');
+		});
+		if (theme !== 'default') $('body').addClass(theme);
+	</script>
 	<nav class="main-menu">
 		<ul>
 			<li>
 				<a href="index.html">
 					<i class="fa fa-home nav_icon"></i>
 					<span class="nav-text">
-					创建抽奖
+						创建抽奖
 					</span>
 				</a>
 			</li>
@@ -88,7 +98,7 @@
 				<a href="javascript:;">
 					<i class="fa fa-cogs nav_icon"></i>
 					<span class="nav-text">
-					进行中
+						进行中
 					</span>
 				</a>
 			</li>
@@ -96,7 +106,7 @@
 				<a href="javascript:;">
 					<i class="fa fa-check-square-o nav_icon"></i>
 					<span class="nav-text">
-					已结束
+						已结束
 					</span>
 				</a>
 			</li>
@@ -104,18 +114,18 @@
 				<a href="javascript:;">
 					<i class="fa fa-list-ul" aria-hidden="true"></i>
 					<span class="nav-text">
-					关于我们
+						关于我们
 					</span>
 			</li>
 		</ul>
 		<ul class="logout">
 			<li>
-			<a href="index.html">
-			<i class="icon-off nav-icon"></i>
-			<span class="nav-text">
-			登出
-			</span>
-			</a>
+				<a href="index.html">
+					<i class="icon-off nav-icon"></i>
+					<span class="nav-text">
+						登出
+					</span>
+				</a>
 			</li>
 		</ul>
 	</nav>
@@ -124,14 +134,14 @@
 			<div class="logo">
 				<h1><a href="index.html"><img src="images/logo.png" alt="" /></br>Lottery</a></h1>
 			</div>
-			<div class="profile_details">		
+			<div class="profile_details">
 				<ul>
 					<li class="dropdown profile_details_drop">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							<div class="profile_img">	
-								<span class="prfil-img"><i class="fa fa-user" aria-hidden="true"></i></span> 
-								<div class="clearfix"></div>	
-							</div>	
+							<div class="profile_img">
+								<span class="prfil-img"><i class="fa fa-user" aria-hidden="true"></i></span>
+								<div class="clearfix"></div>
+							</div>
 						</a>
 					</li>
 				</ul>
@@ -141,51 +151,54 @@
 		<div class="main-grid">
 			<div id="rightContext">
 				<div id="base" class="base">
-						<form id="lnf">
-								<span>抽奖名称: </span>
-								<input id="lname" type="text" name="lotteryName" class="input__field input__field--hoshi" />
-						</form>
+					<form id="lnf">
+						<span>抽奖名称: </span>
+						<input id="lname" type="text" name="lotteryName" class="input__field input__field--hoshi" />
+					</form>
 				</div>
-				
-				<div id="time" class="base">
-						<form id="tf">
-								<span>开始时间</span>
-								<input id="start" type="date" class="inputStyle" />
-								<br />
 
-								<span>结束时间</span>
-								<input id="end" type="date" class="inputStyle" />
-								<br>
-						</form>
+				<div id="time" class="base">
+					<form id="tf">
+						<span>开始时间</span>
+						<input id="start" type="date" class="inputStyle" />
+						<br />
+
+						<span>结束时间</span>
+						<input id="end" type="date" class="inputStyle" />
+						<br>
+					</form>
 				</div>
 
 				<div id="reward" class="base">
-						<form id="rf">
-								<table id="rewardTable">
-										<caption>奖品设置</caption>
-										<tr>
-												<td>奖品名称</td>
-												<td>奖品数量</td>
-												<td>所占比重%(概率)</td>
-										</tr>
-										<tr>
-												<td><input type="text" class="table" /></td>
-												<td><input type="number" class="table" min="0" /></td>
-												<td><input type="number" class="table" min="0" /></td>
-										</tr>
-								</table>
-								<input type="button" class="add" onclick="addReward()" value="添加奖品">
-						</form>
+					<form id="rf">
+						<table id="rewardTable">
+							<caption>奖品设置</caption>
+							<tr>
+								<td>奖品名称</td>
+								<td>奖品数量</td>
+								<td>所占比重%(概率)</td>
+							</tr>
+							<tr>
+								<td><input type="text" class="table" /></td>
+								<td><input type="number" class="table" min="0" /></td>
+								<td><input type="number" class="table" min="0" /></td>
+							</tr>
+						</table>
+						<input type="button" class="add" onclick="addReward()" value="添加奖品">
+					</form>
 				</div>
 
-				<div id="peopleSetting" class="base">
-
+				<div class="upload">
+					<button onclick="upload()" class="add up">导入名单</button>
 				</div>
 
 				<div class="base">
-						<button onclick="submit()" class="button button-highlight button-pill button-large">提交</button>
+					<button onclick="submit()" class="button button-highlight button-pill button-large">提交</button>
+					<div id="stuffList">
+						<!--人员名单-->
+					</div>
 				</div>
-			
+
 			</div>
 		</div>
 		<!-- footer -->
@@ -197,40 +210,41 @@
 	<script src="js/bootstrap.js"></script>
 	<script src="js/proton.js"></script>
 	<script src="js/classie.js"></script>
-		<script>
-			(function() {
-				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-				if (!String.prototype.trim) {
-					(function() {
-						// Make sure we trim BOM and NBSP
-						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-						String.prototype.trim = function() {
-							return this.replace(rtrim, '');
-						};
-					})();
+	<script>
+		(function () {
+			// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+			if (!String.prototype.trim) {
+				(function () {
+					// Make sure we trim BOM and NBSP
+					var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+					String.prototype.trim = function () {
+						return this.replace(rtrim, '');
+					};
+				})();
+			}
+
+			[].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+				// in case the input is already filled..
+				if (inputEl.value.trim() !== '') {
+					classie.add(inputEl.parentNode, 'input--filled');
 				}
 
-				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-					// in case the input is already filled..
-					if( inputEl.value.trim() !== '' ) {
-						classie.add( inputEl.parentNode, 'input--filled' );
-					}
+				// events:
+				inputEl.addEventListener('focus', onInputFocus);
+				inputEl.addEventListener('blur', onInputBlur);
+			});
 
-					// events:
-					inputEl.addEventListener( 'focus', onInputFocus );
-					inputEl.addEventListener( 'blur', onInputBlur );
-				} );
+			function onInputFocus(ev) {
+				classie.add(ev.target.parentNode, 'input--filled');
+			}
 
-				function onInputFocus( ev ) {
-					classie.add( ev.target.parentNode, 'input--filled' );
+			function onInputBlur(ev) {
+				if (ev.target.value.trim() === '') {
+					classie.remove(ev.target.parentNode, 'input--filled');
 				}
-
-				function onInputBlur( ev ) {
-					if( ev.target.value.trim() === '' ) {
-						classie.remove( ev.target.parentNode, 'input--filled' );
-					}
-				}
-			})();
-		</script>
+			}
+		})();
+	</script>
 </body>
+
 </html>
