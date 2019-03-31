@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <title>抽奖</title>
     <link rel="stylesheet" href="./css/lotteryPage.css" media="screen" type="text/css">
+    <link rel="stylesheet" media="screen" href="css/main.css" type="text/css">
     <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
-
     <script type="text/javascript" src='js/transform.js'></script>
     <script type="text/javascript" src='js/tick.js'></script>
     <!--data为静态数据 如用ajax获取请取消输入引入-->
@@ -18,6 +18,8 @@
     <!-- <script type="text/javascript" src='js/ajaxLucky.js'></script> -->
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/rewards.js"></script>
+
+
 
 </head>
 
@@ -33,52 +35,59 @@
         <div class="left lucky_prize">
             <div class="lucky_prize_box">
                 <button class="lucky_prize_left lucky_prize_direction">
-                    <</button> <div data-default="1" class="lucky_prize_picture" id="rewards">
-                        <!--<img class="lucky_prize_show none"
-                     src="img/1.png"
-                     alt="一等奖笔记本"/>
-                -->
+                </button>
+                <div data-default="1" class="lucky_prize_picture" id="rewards">
+                </div>
+                <button class="lucky_prize_right active lucky_prize_direction">></button>
             </div>
-            <button class="lucky_prize_right active lucky_prize_direction">></button>
-        </div>
-        <div class="lucky_prize_title">查看奖品</div>
-        <div class="lucky_setting">
-            <span>
-                <b class="lucky_number">100</b>
-                人参与
-            </span>
 
-            <div class="select_box">
-                一次抽
-                <select name="select_lucky_number" class='select_lucky_number'>
-                    <option selected="selected" value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                </select>
-                人
+            <div class="wrap-login100-form-btn">
+                <div class="lucky_prize_title">
+                    查看奖品
+                </div>
+                <div class="lucky_setting">
+                    <span>
+                        <b class="lucky_number">100</b>
+                        人参与
+                    </span>
+                    <div class="select_box">
+                        一次抽
+                        <select name="select_lucky_number" class='select_lucky_number'>
+                            <option selected="selected" value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                        </select>
+                        人
+                        <p>
+                            <p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="open" class="btn_circle btn_start">开始</div>
+        </div>
+        <div class="right lucky_people_list">
+            <div class="container-login100-form-btn">
+                <div class="wrap-login100-form-btn">
+                    <div class="lucky_people_title">中奖名单</div>
+                    <div class="lpl_list clearfix none">
+                    </div>
+                    <div class="lpl_list clearfix none">
+                    </div>
+                    <div class="lpl_list clearfix none">
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="open" class="btn_circle btn_start">开始</div>
-    </div>
-    <div class="right lucky_people_list">
-        <div class="lucky_people_title">中奖名单</div>
-        <div class="lpl_list clearfix none">
-        </div>
-        <div class="lpl_list clearfix none">
-        </div>
-        <div class="lpl_list clearfix none">
-        </div>
-    </div>
-    </div>
-
-    <img src="/img/bgm.jpeg" class="bgm">
-    <audio class="bgm" src="/audio/bgm.mp3" loop autoplay></audio>
-
+        <img src="img/bgm.png" class="bgm">
+        <audio src="audio/bgm.mp3" autoplay="autoplay" loop="loop"></audio>
 </body>
 
 </html>

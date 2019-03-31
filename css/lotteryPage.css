@@ -1,4 +1,4 @@
-* {
+﻿* {
     padding: 0;
     margin: 0;
 }
@@ -74,13 +74,13 @@ body {
     font-size: 24px;
     text-align: center;
     border-radius: 50%;
-    background-color: #f00;
+    background-color: #E1FFFF;
     cursor: pointer;
     position: absolute;
     right: 50px;
     bottom: 50px;
     z-index: 9;
-    color:#fff;
+    color:rgb(0, 0, 0);
     -webkit-transition:all 0.7s linear;
     -moz-transition:all 0.7s linear;
     -ms-transition:all 0.7s linear;
@@ -88,12 +88,13 @@ body {
     transition:all 0.7s linear;
 }
 .btn_circle:hover{
-    background-color: darkorange;
+    background-color: rgb(255, 0, 0);
     border-color: #fff;
 }
 .btn_start{
     position: static;
     margin:25px auto 0 auto;
+    font-family: "微软雅黑";
 }
 .mask {
     position: absolute;
@@ -125,7 +126,7 @@ body {
     padding:20px;
     position: relative;
     margin:0 auto;
-    background-color: rgba(255, 255, 255, 0.637);
+    background-color: rgba(255, 255, 255, 0.925);
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -167,7 +168,7 @@ body {
     width:100%;
     font-size:35px;
     font-weight: bold;
-    color:rgb(255, 251, 0);
+    color:rgb(15, 15, 15);
     height:35%;
     line-height: 3em;
     font-family: "微软雅黑";
@@ -192,12 +193,12 @@ body {
     height:100%;
     background-color: transparent;
     border:none;
-    color:#fff;
+    color:#E1FFFF;
     font-size: 60px;
     text-align: center;
 }
 .lucky_prize_direction.active{
-    color:#f22;
+    color:#E1FFFF;
 }
 button:focus{
     outline: none;
@@ -215,23 +216,25 @@ button:focus{
 .lucky_people_title{
     width:100%;
     height:60px;
-    background-color: #f22;
+    background-color: #E1FFFF;
     font-size: 24px;
-    color:#fff;
+    color:rgb(7, 7, 7);
     text-align: center;
     line-height: 60px;
     font-weight: bold;
+    font-family: "微软雅黑";
 }
 .lucky_setting{
     height:50px;
-    background-color: #f22;
+    background-color: #E1FFFF;
     font-size: 16px;
-    color:#fff;
+    color:rgb(0, 0, 0);
     text-align: left;
     line-height: 50px;
     padding:0 10px;
     font-weight: bold;
     margin-top:25px;
+    font-family: "微软雅黑";
 }
 .select_box{
     float: right;
@@ -239,8 +242,8 @@ button:focus{
 }
 .select_lucky_number{
     font-size: 22px;
-    border:1px solid rgb(255, 174, 0);
-    background-color: #f22;
+    border:0px solid rgb(255, 174, 0);
+    background-color: rgb(255, 255, 255);
     outline: none;
 }
 .lucky_number{
@@ -248,12 +251,13 @@ button:focus{
 }
 .lucky_prize_title{
     height:50px;
-    background-color: #f22;
-    color:#fff;
+    background-color: #E1FFFF;
+    color:rgb(8, 8, 8);
     text-align: center;
     line-height: 50px;
     font-weight: bold;
     margin-top:25px;
+    font-family: "微软雅黑";
 }
 .lpl_list{
     margin-top:20px;
@@ -274,6 +278,7 @@ button:focus{
     justify-content: center;
     color:#fff;
     font-size: 30px;
+    font-family: "微软雅黑";
 }
 
 .none {
