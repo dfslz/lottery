@@ -180,3 +180,9 @@ caption {
 .up {
     width: 70%;
 }
+
+.personInfo {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
