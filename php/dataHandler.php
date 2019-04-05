@@ -26,7 +26,7 @@
     $fout = fopen($root."dataInfo.dat", "w");
     $lotteryList[$amount] = $id;
 
-    //重写抽奖信息
+    //重写抽奖信息列表
     fprintf($fout, "%d", $amount+1);
     for($i = 0; $i <= $amount; ++$i) {
         fprintf($fout, "\n%d", $lotteryList[$i]);
@@ -41,7 +41,8 @@
     fclose($newLottery);
 
     //写入人员名单
-    $fmember = fopen($root.$id."member", "w");
+    $fmember = fopen($root.$id.".member", "w");
+    fprintf($fmember, "%d\n", $memberAmount / 2 - 1);
     for($i = 2; $i < $memberAmount; $i++) {//$member[0,1]两位为title
         fprintf($fmember, "%s\n", $member[$i]);
     }

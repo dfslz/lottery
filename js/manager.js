@@ -63,7 +63,7 @@ function parse() {
 
     var inputs = $(":input");
     inputs.each(function(){
-        if($(this).val() != "添加奖品") {
+        if(this.type != "button" && this.type != "file") {
             rewardList[cnt1++] = $(this).val();
         }
     });

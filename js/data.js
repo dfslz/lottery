@@ -1,6 +1,43 @@
-    var personArray = new Array;
+var personArray = function () {
+    var mlist = [];
+    var lid = getCookie("page");
 
+    $.ajax({
+        url: "https://lzblog.club/lottery/php/getMember.php",
+        type: "POST",
+        dataType: "json",
+        async: false,
+        data: {
+            id: lid
+        },
+        success: function (data, status) {
+            for (var i = 0; i < data.length; i += 2) {
+                mlist.push({
+                    name: data[i],
+                    id: parseInt(data[i + 1]),
+                    thumb_image: "img/tx.png",
+                    image: "img/tx.png"
+                });
+            }
+        },
+        error: function (jqXHR, status, err) {
+            alert("cannot connet to server!");
+        }
+    });
+    return mlist;
+}();
 
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+
+/*
     personArray.push({
         id: 546,
         image: "img/tx.png",
@@ -502,3 +539,4 @@
         thumb_image: "img/tx.png",
         name: "侠客行"
     });
+    */
