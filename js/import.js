@@ -24,12 +24,12 @@ function upload(obj) {
 }
 
 function getStuff(name, id) {
-    var stuffName = document.createElement("input");
-    var stuffId = document.createElement("input");
+    var stuffName = document.createElement("span");
+    var stuffId = document.createElement("span");
 
-    stuffName.value = name;
+    stuffName.innerText = name;
     stuffName.className = "table";
-    stuffId.value = id;
+    stuffId.innerText = id;
     stuffId.className = "table";
 
     var tr = document.createElement("tr");

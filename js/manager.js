@@ -54,15 +54,22 @@ function addReward() {
     rewardTable.appendChild(tr);
 }
 
-var rewardList = [], cnt = 0;
+var rewardList = [], cnt1 = 0, cnt2 = 0, member=[];
 function parse() {
     rewardList = [];
-    cnt = 0;
+    member = [];
+    cnt1 = 0;
+    cnt2 = 0;
+
     var inputs = $(":input");
     inputs.each(function(){
         if($(this).val() != "添加奖品") {
-            rewardList[cnt++] = $(this).val();
+            rewardList[cnt1++] = $(this).val();
         }
+    });
+
+    $("td>span").each(function(){
+        member[cnt2++] = this.innerText;
     });
 }
 
@@ -73,8 +80,10 @@ function submit() {
         url: "https://lzblog.club/lottery/php/dataHandler.php",
         type: "POST",
         data: {
-            length: cnt,
-            rewards: rewardList
+            length: cnt1,
+            rewards: rewardList,
+            amount: cnt2,
+            list: member
         },
         dataType: "json",
         success: function (data, status) {

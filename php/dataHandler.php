@@ -1,6 +1,8 @@
 <?php
     $rewards = $_POST["rewards"];
     $length = $_POST["length"];
+    $memberAmount = $_POST["amount"];
+    $member = $_POST["list"];
 
     //获取抽奖信息
     $root = "/var/www/html/lottery/data/";
@@ -36,6 +38,14 @@
     for($i = 0; $i < $length; ++$i) {
         fprintf($newLottery, "%s\n", $rewards[$i]);
     }
-    echo json_encode("ok");
     fclose($newLottery);
+
+    //写入人员名单
+    $fmember = fopen($root.$id."member", "w");
+    for($i = 2; $i < $memberAmount; $i++) {//$member[0,1]两位为title
+        fprintf($fmember, "%s\n", $member[$i]);
+    }
+    fclose($fmember);
+
+    echo json_encode("ok");
 ?>
