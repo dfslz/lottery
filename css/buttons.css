@@ -279,7 +279,7 @@
 
 .button-highlight,
 .button-highlight-flat {
-  background-color: #FEAE1B;
+  background-color: #00BCD4;
   border-color: #FEAE1B;
   color: #FFF; }
   .button-highlight:visited,
@@ -455,15 +455,6 @@
 * Create colors for buttons
 * (.button-primary, .button-secondary, etc.)
 */
-.button-border, .button-border-thin, .button-border-thick,
-.button-border-thin,
-.button-border-thick {
-  /*
-  * Border Button Size Adjustment
-  *
-  * The line-height must be adjusted to compinsate for
-  * the width of the border.
-  */ }
   .button-border.button-primary, .button-primary.button-border-thin, .button-primary.button-border-thick,
   .button-border-thin.button-primary,
   .button-border-thick.button-primary {
@@ -1490,3 +1481,4 @@
   height: 24px;
   line-height: 24px;
   padding: 0 24px; }
+

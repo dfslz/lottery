@@ -56,7 +56,7 @@
 }
 
 .menu>p {
-    background-color: white;
+    background-color: #00BCD4;
     margin: 2px 0px;
     border: 1px solid gray;
     box-shadow: 0px 0px 2px gray;
@@ -103,7 +103,7 @@ button {
 }
 
 .add {
-    background: #98bf21;
+    background: #00BCD4;
     margin: 0px 0px;
     border: 0px;
     width: 100%;
@@ -123,6 +123,7 @@ button {
     border: 1px solid #98bf21;
     padding: 3px 7px 2px 7px;
     text-align: center;
+    
 }
 
 #reward th,
@@ -131,7 +132,7 @@ caption {
     text-align: center !important;
     padding-top: 5px;
     padding-bottom: 4px;
-    background-color: #A7C942;
+    background-color: #00BCD4;
     color: #ffffff;
 }
 
