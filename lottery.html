@@ -18,9 +18,6 @@
     <!-- <script type="text/javascript" src='js/ajaxLucky.js'></script> -->
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/rewards.js"></script>
-
-
-
 </head>
 
 <body>
@@ -31,6 +28,7 @@
     <div class="loader_file">
         用户数据导入中 <span class="current_number"></span><span class="all_number"></span>
     </div>
+
     <div class="lucky_list clearfix">
         <div class="left lucky_prize">
             <div class="lucky_prize_box">
@@ -85,8 +83,17 @@
                 </div>
             </div>
         </div>
-        <img src="img/bgm.png" class="bgm">
-        <audio src="audio/bgm.mp3" autoplay="autoplay" loop="loop"></audio>
+    </div>
+
+    <div id="memberList" class="member">
+        <button class="show">人员名单</button>
+        <div class="list">
+            <ul id="memberName">
+            </ul>
+        </div>
+    </div>
+    <img src="img/bgm.png" class="bgm">
+    <audio src="audio/bgm.mp3" autoplay="autoplay" loop="loop"></audio>
 </body>
 
 </html>

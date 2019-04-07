@@ -1,6 +1,6 @@
 <?php
     function check($usr, $pwd ) {
-        if($usr == $pwd ) {
+        if($usr == "admin" && $pwd == "admin" ) {
             return true;
         } else {
             return false;

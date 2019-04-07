@@ -284,3 +284,31 @@ button:focus{
 .none {
     display: none;
 }
+
+.member {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.show {
+    background-color: rgb(209, 73, 73);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+}
+
+.list {
+    display: none;
+    text-align: center;
+    background-color: rgb(223, 213, 213);
+    height: 90%;
+    overflow: auto;
+}
+
+.member:hover .list {
+    display: block;
+}

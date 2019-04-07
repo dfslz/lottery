@@ -249,5 +249,11 @@ $(function () {
         });
     }
     getRewards();
-    //tabPrize();
+
+    //人员列表
+    for(var i = 0; i < personArray.length; i++) {
+        var member = document.createElement("li");
+        member.innerText = personArray[i].name;
+        $("#memberName").append(member);
+    }
 });
