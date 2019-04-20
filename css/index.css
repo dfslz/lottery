@@ -1,9 +1,5 @@
 .button {
     text-align: center;
-    border-bottom: 1px dotted gray;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    cursor: pointer;
 }
 
 .menu {
@@ -30,4 +26,12 @@
     background-color:rgba(0, 0, 0, 0.726);
     color: rgb(233, 220, 220);
     text-align: center;
+}
+
+.selector {
+    text-decoration: none;
+    color: black;
+    padding: 15px 0px;
+    display: block;
+    border-bottom: 1px dotted gray;
 }

@@ -1,10 +1,13 @@
 $(document).ready(function () {
+    $.ajaxSettings.async = false;
     $.post("https://lzblog.club/lottery/php/getLotteryList.php", function (data) {
         var array = JSON.parse(data);
         for (var i = 0; i < array.length; ++i) {
             createNewLottery(array[i]);
         }
     });
+    $.ajaxSettings.async = true;
+    init();
 
     function createNewLottery(info) {
         var container = document.createElement("div");
@@ -27,7 +30,7 @@ $(document).ready(function () {
         end.className = "timeMessage";
         panel.appendChild(end);
 
-        var name = document.createElement("div");
+        var name = document.createElement("p");
         name.className = "name";
         panel.appendChild(name);
 
