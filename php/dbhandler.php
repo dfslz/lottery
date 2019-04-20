@@ -3,37 +3,50 @@
 //require 'db.php';
 require 'dbcreator.php';
 
-function queryTime($id) {
+function queryTime($id)
+{
     $db = login(); //创建连接
 
     $sql = "select * from lotteries where lid=$id";
-    $res = $db->query($sql);
+    $time = $db->query($sql);
+    foreach($time as $row) {
+        $res = $row;
+    }
 
     $db = null; //释放连接
     return $res;
 }
 
-function queryRewards($id) {
+function queryRewards($id)
+{
     $db = login();
 
     $sql = "select * from rewards where lid=$id";
-    $res = $db->query($sql);
+    $rewards = $db->query($sql);
+    foreach($rewards as $row) {
+        $res = $row;
+    }
 
     $db = null;
     return $res;
 }
 
-function queryMembers($id) {
+function queryMembers($id)
+{
     $db = login();
 
     $sql = "select * from members where lid=$id";
-    $res = $db->query($sql);
+    $member = $db->query($sql);
+    foreach($member as $row) {
+        $res = $row;
+    }
 
     $db = null;
     return $res;
 }
 
-function insertLottery($info = ['000000', '1970-01-01', '1970-01-01']) {
+function insertLottery($info = ['000000', '1970-01-01', '1970-01-01'])
+{
     $db = login(); //创建连接
 
     $table = 'lotteries';
@@ -45,11 +58,12 @@ function insertLottery($info = ['000000', '1970-01-01', '1970-01-01']) {
     return $res;
 }
 
-function insertRewards($list, $id) {
+function insertRewards($list, $id)
+{
     $db = login();
     $table = 'rewards';
 
-    for($i = 0; $i < count($list); $i += 3) {
+    for ($i = 0; $i < count($list); $i += 3) {
         $t1 = $i + 1;
         $t2 = $i + 2;
         $values = "values('$list[$i]', $list[$t1], $list[$t2], '$id')";
@@ -60,22 +74,24 @@ function insertRewards($list, $id) {
     $db = null;
 }
 
-function insertMembers($list, $id) {
+function insertMembers($list, $id)
+{
     $db = login();
     $table = 'members';
 
-    for($i = 0; $i < count($list); $i += 2) {
+    for ($i = 0; $i < count($list); $i += 2) {
         $t1 = $i + 1;
         $values = "values('$list[$i]', '$list[$t1]', '$id')";
         $sql = "insert into $table $values";
-        echo $sql."\n";
+        echo $sql . "\n";
         $db->exec($sql);
     }
 
     $db = null;
 }
 
-function deleteLottery($id) {
+function deleteLottery($id)
+{
     $db = login(); //create link
 
     $table = 'lotteries';
@@ -83,5 +99,23 @@ function deleteLottery($id) {
     $res = $db->exec($sql);
 
     $db = null; //free link
+    return $res;
+}
+
+function check($id, $psd)
+{
+    $db = login();
+    $res = false;
+
+    $sql = "select * from user where user='$id'";
+    $user = $db->query($sql);
+
+    foreach($user as $row) {
+        if($row['password'] == md5($psd)) {
+            $res = true;
+        }
+    }
+
+    $db = null;
     return $res;
 }
