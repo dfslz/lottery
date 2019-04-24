@@ -45,12 +45,12 @@ function queryMembers($id)
     return $res;
 }
 
-function insertLottery($info = ['000000', '1970-01-01', '1970-01-01'])
+function insertLottery($info = ['000000', 'newLottery', '1970-01-01', '1970-01-01'])
 {
     $db = login(); //创建连接
 
     $table = 'lotteries';
-    $values = "value('$info[0]', '$info[1]', '$info[2]')";
+    $values = "value('$info[0]', '$info[1]', '$info[2]', '$info[3]')";
     $sql = "insert into $table $values";
     $res = $db->exec($sql);
 

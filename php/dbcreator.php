@@ -6,7 +6,7 @@ function createLotteries()
 {
     $db = login(); //log in db
 
-    $sql = "create table lotteries(lid char(6) primary key, begin date, end date)";
+    $sql = "create table lotteries(lid char(6) primary key, begin date, end date, name varchar(50))";
     $db->exec($sql);
 
     $db = null; //free
