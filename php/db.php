@@ -1,7 +1,7 @@
 <?php
 
 $dbtype = 'mysql';
-$host = 'localhost';
+$host = '127.0.0.1';
 $dbname = 'lottery';
 
 $dsn = "$dbtype:host=$host;dbname=$dbname";
@@ -16,3 +16,5 @@ function login() {
     $db = new PDO($dsn, $username, $password);
     return $db;
 }
+
+$link = login();

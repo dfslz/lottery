@@ -16,6 +16,7 @@ while(queryTime($lid) != null) {//随机生成一个id
     $lid = getid(rand(0, 1000000));
 }
 insertLottery([$lid, $rewards[0], $rewards[1], $rewards[2]]);
+//TODO: 处理上传的数据,应当封装成类
 
 //获取抽奖信息
 $root = "/var/www/html/lottery/data/";
